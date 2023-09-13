@@ -31,7 +31,7 @@ class Data extends AbstractHelper
             null
         );
 
-        return $value === Enabledisable::ENABLE_VALUE;
+        return $value == Enabledisable::ENABLE_VALUE;
     }
 
     /**

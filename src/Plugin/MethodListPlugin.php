@@ -58,7 +58,5 @@ class MethodListPlugin
                 return in_array($method->getCode(), $allowedPaymentMethods);
             }
         );
-
-        return $paymentMethods;
     }
 }
