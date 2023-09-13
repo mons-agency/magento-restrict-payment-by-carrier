@@ -1,0 +1,28 @@
+{
+    "name": "mons/magento-restrict-payment-by-carrier",
+    "description": "Restrict displayed payment methods by selected shipping carriers.",
+    "require": {
+        "php": "~8.1.0||~8.2.0",
+        "magento/framework": "103.0.*"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "AFL-3.0"
+    ],
+    "authors": [
+        {
+            "name": "Filippo Bovo",
+            "homepage": "https://filippobovo.com",
+            "role": "Solutions architect"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/registration.php"
+        ],
+        "psr-4": {
+            "Mons\\RestrictPaymentByCarrier\\": "src/"
+        }
+    }
+}
