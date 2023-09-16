@@ -15,8 +15,13 @@ class ConfigStructureReaderPlugin
      * @param array $result
      * @return array
      */
-    public function afterRead(Subject $subject, array $result): array
+    public function afterRead(Subject $subject, ?array $result): array
     {
+        //
+        if (!$result || !isset($result['config']['system']['sections']['carriers']['children'])) {
+            return $result;
+        }
+
         foreach ($result['config']['system']['sections']['carriers']['children'] as &$method) {
             $method['children']['restrict_payment_methods'] = [
                 'id' => 'restrict_payment_methods',
